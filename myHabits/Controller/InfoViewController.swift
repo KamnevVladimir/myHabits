@@ -5,7 +5,7 @@ class InfoViewController: UIViewController {
         let label = UILabel()
         
         label.toAutoLayout()
-        label.font = FontSet.fonts[.title3]
+        label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         label.text = InfoText.titleInfoText
         label.textColor = .black
         label.textAlignment = .left
@@ -17,11 +17,12 @@ class InfoViewController: UIViewController {
         let textView = UITextView()
         
         textView.toAutoLayout()
-        textView.font = FontSet.fonts[.body]
+        textView.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         textView.textColor = .black
         textView.textAlignment = .left
         textView.text = InfoText.text
         textView.isEditable = false
+        textView.isScrollEnabled = false
         textView.isUserInteractionEnabled = true
 
         textView.contentInset = .zero
@@ -57,9 +58,6 @@ class InfoViewController: UIViewController {
     }
     
     private func setupLayout() {
-        // Получим размеры области текста
-        let fixedWidthTextView = view.frame.size.width - view.safeAreaInsets.left - view.safeAreaInsets.right - 32
-        let sizeTextView = infoTextView.sizeThatFits(CGSize(width: fixedWidthTextView, height: CGFloat.greatestFiniteMagnitude))
         
         let constraints = [
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -81,7 +79,6 @@ class InfoViewController: UIViewController {
             infoTextView.leadingAnchor.constraint(equalTo: infoLabel.leadingAnchor),
             infoTextView.trailingAnchor.constraint(equalTo: infoLabel.trailingAnchor),
             infoTextView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: infoTextView.contentInset.bottom - 22),
-            infoTextView.heightAnchor.constraint(equalToConstant: sizeTextView.height)
         ]
         
         NSLayoutConstraint.activate(constraints)

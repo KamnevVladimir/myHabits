@@ -24,7 +24,7 @@ class HabitCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.numberOfLines = 2
         label.toAutoLayout()
-        label.font = FontSet.fonts[.footnoteBold]
+        label.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         return label
     }()
     
@@ -32,7 +32,7 @@ class HabitCollectionViewCell: UICollectionViewCell {
     private lazy var habitTimeLabel: UILabel = {
         let label = UILabel()
         label.toAutoLayout()
-        label.font = FontSet.fonts[.caption]
+        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         return label
     }()
     
@@ -40,7 +40,8 @@ class HabitCollectionViewCell: UICollectionViewCell {
     private lazy var habitRepeatLabel: UILabel = {
         let label = UILabel()
         label.toAutoLayout()
-        label.font = FontSet.fonts[.footnoteRegular]
+        label.font = UIFont.systemFont(ofSize: 13, weight: .regular
+        )
         return label
     }()
     
@@ -133,17 +134,10 @@ class HabitCollectionViewCell: UICollectionViewCell {
     
     @objc
     private func roundColorViewTapped() {
-        
         if !isHabitDone {
             HabitsStore.shared.track(habit!)
             roundColorView.backgroundColor = UIColor(cgColor:  roundColorView.layer.borderColor!)
-            
-        } else {
-            HabitsStore.shared.deleteLastTrack(habit!)
-            roundColorView.backgroundColor = UIColor.clear
         }
-        
-        
         delegate?.updateCollectionView()
     }
 }

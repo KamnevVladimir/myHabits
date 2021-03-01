@@ -1,16 +1,17 @@
 import UIKit
 
 class HabitsDetailsViewController: UIViewController {
-    var habit: Habit? {
+    private var trackDatesString: [String]?
+    var delegate: HabitsViewController?
+    var indexPath: IndexPath? {
         didSet {
-            guard let safeHabit = habit else { return }
-            title = safeHabit.name
+            if let safeIndexPath = indexPath {
+                let habit = HabitsStore.shared.habits[safeIndexPath.item]
+                title = habit.name
+                trackDatesString = HabitsStore.shared.trackDatesString(habit)
+            }
         }
     }
-
-    private lazy var trackDatesString = HabitsStore.shared.trackDatesString(habit!)
-    var delegate: HabitsViewController?
-    var indexPath: IndexPath?
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
@@ -25,16 +26,18 @@ class HabitsDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = ColorSet.colors[.nearWhite]
-
+        navigationItem.largeTitleDisplayMode = .never
+        
         setupNavBar()
         setupViews()
         setupLayout()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationItem.largeTitleDisplayMode = .never
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        delegate?.updateCollectionView()
     }
+   
     
     private func setupViews() {
         view.addSubview(tableView)
@@ -54,15 +57,15 @@ class HabitsDetailsViewController: UIViewController {
     private func setupNavBar() {
         
         let editButton = UIBarButtonItem(title: "Править", style: .done, target: self, action: #selector(editButtonTapped))
-        editButton.setTitleTextAttributes([.font: FontSet.fonts[.body]!], for: .normal)
-        editButton.setTitleTextAttributes([.font: FontSet.fonts[.body]!], for: .selected)
-        editButton.setTitleTextAttributes([.font: FontSet.fonts[.body]!], for: .disabled)
+        editButton.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 17, weight: .regular)], for: .normal)
+        editButton.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 17, weight: .regular)], for: .selected)
+        editButton.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 17, weight: .regular)], for: .disabled)
         
         
         navigationController?.navigationBar.tintColor = ColorSet.colors[.violet]
         
         navigationController?.navigationBar.titleTextAttributes = [
-            .font: FontSet.fonts[.headline] ?? UIFont.systemFont(ofSize: 20)]
+            .font: UIFont.systemFont(ofSize: 17, weight: .semibold)]
         
         navigationItem.rightBarButtonItem = editButton
     }
@@ -72,14 +75,12 @@ class HabitsDetailsViewController: UIViewController {
         let habitViewController = HabitViewController()
         let habitNavigationController = UINavigationController(rootViewController: habitViewController)
         
-        habitViewController.habit = habit
+        habitViewController.habit = HabitsStore.shared.habits[indexPath!.item]
         habitViewController.indexPath = indexPath
         habitViewController.isEditMode = true
-        habitViewController.delegate = delegate
+        habitViewController.habitsDetailsViewController = self
         
-        present(habitNavigationController, animated: true) {
-            self.navigationController?.popViewController(animated: false)
-        }
+        present(habitNavigationController, animated: true)
     }
 }
 
@@ -94,15 +95,15 @@ extension HabitsDetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return trackDatesString.count
+        return trackDatesString!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reusableCell")!
         
-        let reverseIndex = trackDatesString.count - indexPath.row - 1
-        cell.textLabel?.text = trackDatesString[reverseIndex]
-        cell.textLabel?.font = FontSet.fonts[.body]
+        let reverseIndex = trackDatesString!.count - indexPath.row - 1
+        cell.textLabel?.text = trackDatesString![reverseIndex]
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         cell.textLabel?.textColor = .black
         
         return cell

@@ -13,9 +13,6 @@
 		15444A2525D682930074076D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15444A2425D682930074076D /* Assets.xcassets */; };
 		15444A2825D682930074076D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15444A2625D682930074076D /* LaunchScreen.storyboard */; };
 		15444A3425D686BE0074076D /* HabitsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A3325D686BE0074076D /* HabitsStore.swift */; };
-		15444A4025D691C30074076D /* SFProText-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15444A3D25D691C30074076D /* SFProText-Semibold.ttf */; };
-		15444A4125D691C30074076D /* SFProText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15444A3E25D691C30074076D /* SFProText-Regular.ttf */; };
-		15444A4225D691C30074076D /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15444A3F25D691C30074076D /* SFProDisplay-Semibold.ttf */; };
 		15444A4525D692C10074076D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A4425D692C10074076D /* InfoViewController.swift */; };
 		15444A4F25D6F9F50074076D /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A4A25D6F9F50074076D /* UIStackView.swift */; };
 		15444A5025D6F9F50074076D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A4B25D6F9F50074076D /* UIView.swift */; };
@@ -26,7 +23,6 @@
 		15444A6125D957100074076D /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A6025D957100074076D /* ColorSet.swift */; };
 		15444A6525D957A10074076D /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A6425D957A10074076D /* TabBarModel.swift */; };
 		15444A6D25D96D270074076D /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A6C25D96D270074076D /* ProgressCollectionViewCell.swift */; };
-		15444A7125D9724B0074076D /* FontSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A7025D9724B0074076D /* FontSet.swift */; };
 		15444A7525D99C8E0074076D /* InfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A7425D99C8E0074076D /* InfoText.swift */; };
 		15444A7825D9B6A60074076D /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A7725D9B6A60074076D /* UITextView.swift */; };
 		15444A7B25D9C4730074076D /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A7A25D9C4730074076D /* HabitViewController.swift */; };
@@ -45,9 +41,6 @@
 		15444A2725D682930074076D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15444A2925D682930074076D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15444A3325D686BE0074076D /* HabitsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsStore.swift; sourceTree = "<group>"; };
-		15444A3D25D691C30074076D /* SFProText-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Semibold.ttf"; sourceTree = "<group>"; };
-		15444A3E25D691C30074076D /* SFProText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Regular.ttf"; sourceTree = "<group>"; };
-		15444A3F25D691C30074076D /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
 		15444A4425D692C10074076D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		15444A4A25D6F9F50074076D /* UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		15444A4B25D6F9F50074076D /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -58,7 +51,6 @@
 		15444A6025D957100074076D /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
 		15444A6425D957A10074076D /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		15444A6C25D96D270074076D /* ProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewCell.swift; sourceTree = "<group>"; };
-		15444A7025D9724B0074076D /* FontSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSet.swift; sourceTree = "<group>"; };
 		15444A7425D99C8E0074076D /* InfoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoText.swift; sourceTree = "<group>"; };
 		15444A7725D9B6A60074076D /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		15444A7A25D9C4730074076D /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				15444A5525D6F9FE0074076D /* Extensions */,
-				15444A3A25D68D240074076D /* AppFonts */,
 				15444A3625D688970074076D /* Model */,
 				15444A3725D6889F0074076D /* View */,
 				15444A3825D688A30074076D /* Controller */,
@@ -116,7 +107,6 @@
 				15444A3325D686BE0074076D /* HabitsStore.swift */,
 				15444A6025D957100074076D /* ColorSet.swift */,
 				15444A6425D957A10074076D /* TabBarModel.swift */,
-				15444A7025D9724B0074076D /* FontSet.swift */,
 				15444A7425D99C8E0074076D /* InfoText.swift */,
 			);
 			path = Model;
@@ -143,16 +133,6 @@
 				15444A4425D692C10074076D /* InfoViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		15444A3A25D68D240074076D /* AppFonts */ = {
-			isa = PBXGroup;
-			children = (
-				15444A3F25D691C30074076D /* SFProDisplay-Semibold.ttf */,
-				15444A3E25D691C30074076D /* SFProText-Regular.ttf */,
-				15444A3D25D691C30074076D /* SFProText-Semibold.ttf */,
-			);
-			path = AppFonts;
 			sourceTree = "<group>";
 		};
 		15444A5525D6F9FE0074076D /* Extensions */ = {
@@ -229,9 +209,6 @@
 			files = (
 				15444A2825D682930074076D /* LaunchScreen.storyboard in Resources */,
 				15444A2525D682930074076D /* Assets.xcassets in Resources */,
-				15444A4025D691C30074076D /* SFProText-Semibold.ttf in Resources */,
-				15444A4225D691C30074076D /* SFProDisplay-Semibold.ttf in Resources */,
-				15444A4125D691C30074076D /* SFProText-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +240,6 @@
 				15444A5A25D6FDFF0074076D /* UIColor.swift in Sources */,
 				153403B425E01F2100F3345C /* Date.swift in Sources */,
 				15444A5E25D943FB0074076D /* HabitCollectionViewCell.swift in Sources */,
-				15444A7125D9724B0074076D /* FontSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

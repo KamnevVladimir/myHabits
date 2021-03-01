@@ -6,7 +6,7 @@ class ProgressCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         
         label.toAutoLayout()
-        label.font = FontSet.fonts[.caption]
+        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         label.textColor = ColorSet.colors[.systemGray2]
         label.text = "Всё получится!"
         
@@ -17,7 +17,7 @@ class ProgressCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         
         label.toAutoLayout()
-        label.font = FontSet.fonts[.caption]
+        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         label.textColor = ColorSet.colors[.systemGray2]
         
         return label

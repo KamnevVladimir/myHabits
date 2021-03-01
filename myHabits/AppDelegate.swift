@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .font: UIFont(name: "SFProDisplay-Semibold", size: 40) ?? UIFont.systemFont(ofSize: 30)]
         
         infoNavigationController.navigationBar.titleTextAttributes = [
-            .font: FontSet.fonts[.title3] ?? UIFont.systemFont(ofSize: 20)
+            .font: UIFont.systemFont(ofSize: 20, weight: .semibold)
         ]
         
         return true

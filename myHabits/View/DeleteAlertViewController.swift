@@ -10,13 +10,16 @@ class DeleteAlertViewController: UIAlertController {
         let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
         let deleteAction = UIAlertAction(title: "Удалить", style: .destructive) {[unowned self] _ in
             HabitsStore.shared.habits.remove(at: (safeDelegate.indexPath?.item)!)
-            self.delegate?.dismiss(animated: true, completion: nil)
+            self.returnToHabits()
         }
-        
-        title = "Вы хотите удалить привычку \"" + (delegate?.habit?.name)! + "\""
         
         addAction(cancelAction)
         addAction(deleteAction)
+    }
+    
+    func returnToHabits() {
+        self.delegate?.habitsDetailsViewController?.navigationController?.popViewController(animated: true)
+        self.delegate?.dismiss(animated: true, completion: nil)
     }
 
 }

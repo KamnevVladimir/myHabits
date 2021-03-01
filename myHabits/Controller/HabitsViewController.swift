@@ -31,6 +31,10 @@ class HabitsViewController: UIViewController {
         setupNavigationBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.largeTitleDisplayMode = .always
+    }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -62,7 +66,7 @@ class HabitsViewController: UIViewController {
         let habitNavigationController = UINavigationController(rootViewController: habitViewController)
         
         habitViewController.isEditMode = false
-        habitViewController.delegate = self
+        habitViewController.habitsViewController = self
         
         present(habitNavigationController, animated: true, completion: nil)
     }
@@ -111,10 +115,10 @@ extension HabitsViewController: UICollectionViewDataSource {
         guard indexPath.section == 1 else { return }
         let habitsDetailsViewController = HabitsDetailsViewController()
         
-        habitsDetailsViewController.habit = HabitsStore.shared.habits[indexPath.item]
         navigationController?.pushViewController(habitsDetailsViewController, animated: true)
         habitsDetailsViewController.delegate = self
         habitsDetailsViewController.indexPath = indexPath
+        
     }
 }
 
