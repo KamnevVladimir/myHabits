@@ -255,8 +255,6 @@ class HabitViewController: UIViewController {
             habitsDetailsViewController?.title = habitText
             dismiss(animated: true, completion: nil)
         }
-
-        
     }
     
     @objc
@@ -299,17 +297,5 @@ extension HabitViewController: UIColorPickerViewControllerDelegate {
     func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
         colorView.backgroundColor = viewController.selectedColor
         dateIsChanged()
-    }
-}
-
-//MARK: - HabitStackView
-private class HabitStackView: UIStackView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-    }
-    
-    required init(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

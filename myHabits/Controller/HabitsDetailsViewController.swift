@@ -2,13 +2,17 @@ import UIKit
 
 class HabitsDetailsViewController: UIViewController {
     private var trackDatesString: [String]?
+    private var datesString: [String]?
+    private var habit: Habit?
+    
     var delegate: HabitsViewController?
     var indexPath: IndexPath? {
         didSet {
             if let safeIndexPath = indexPath {
-                let habit = HabitsStore.shared.habits[safeIndexPath.item]
-                title = habit.name
-                trackDatesString = HabitsStore.shared.trackDatesString(habit)
+                habit = HabitsStore.shared.habits[safeIndexPath.item]
+                title = habit!.name
+                trackDatesString = HabitsStore.shared.trackDatesString(habit!)
+                datesString = HabitsStore.shared.datesString(habit!)
             }
         }
     }
@@ -95,16 +99,23 @@ extension HabitsDetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return trackDatesString!.count
+        return datesString?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reusableCell")!
         
-        let reverseIndex = trackDatesString!.count - indexPath.row - 1
-        cell.textLabel?.text = trackDatesString![reverseIndex]
+        guard var safeDatesString = datesString, !safeDatesString.isEmpty else { return cell }
+        safeDatesString.reverse()
+        
+        cell.textLabel?.text = safeDatesString[indexPath.row]
         cell.textLabel?.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         cell.textLabel?.textColor = .black
+        cell.accessoryType = .none
+        
+        if HabitsStore.shared.isDateIsToken(habit: habit!, indexDate: indexPath) {
+            cell.accessoryType = .checkmark
+        }
         
         return cell
     }

@@ -219,6 +219,24 @@ public final class HabitsStore {
         return trackDates
     }
     
+    public func datesString(_ habit: Habit) -> [String] {
+        var datesString: [String] = []
+        
+        for date in dates {
+            datesString.append(date.formattedDate)
+        }
+        
+        return datesString
+    }
+    
+    public func isDateIsToken(habit: Habit, indexDate: IndexPath) -> Bool {
+        var arrayDatesString = datesString(habit)
+        arrayDatesString.reverse()
+        let arrayTrackDatesString = trackDatesString(habit)
+        
+        return arrayTrackDatesString.contains(arrayDatesString[indexDate.row])
+    }
+    
     /// Высчиттывает количество дней между датами
     private func daysBetween(start: Date, end: Date) -> Int {
         Calendar.current.dateComponents([.day], from: start, to: end).day!
