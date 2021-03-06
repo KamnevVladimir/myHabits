@@ -18,7 +18,6 @@
 		15444A5025D6F9F50074076D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A4B25D6F9F50074076D /* UIView.swift */; };
 		15444A5225D6F9F50074076D /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A4D25D6F9F50074076D /* UIImage.swift */; };
 		15444A5325D6F9F50074076D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A4E25D6F9F50074076D /* UIViewController.swift */; };
-		15444A5A25D6FDFF0074076D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A5925D6FDFF0074076D /* UIColor.swift */; };
 		15444A5E25D943FB0074076D /* HabitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A5D25D943FB0074076D /* HabitCollectionViewCell.swift */; };
 		15444A6125D957100074076D /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A6025D957100074076D /* ColorSet.swift */; };
 		15444A6525D957A10074076D /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A6425D957A10074076D /* TabBarModel.swift */; };
@@ -30,6 +29,7 @@
 		15444A8325DD34D30074076D /* HabitsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A8225DD34D30074076D /* HabitsDetailsViewController.swift */; };
 		15444A8625DD47870074076D /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A8525DD47870074076D /* UILabel.swift */; };
 		15444A8A25DD7FDC0074076D /* DeleteAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15444A8925DD7FDC0074076D /* DeleteAlertViewController.swift */; };
+		15CB777425ED6FA1007D5C0D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CB777325ED6FA1007D5C0D /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +46,6 @@
 		15444A4B25D6F9F50074076D /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		15444A4D25D6F9F50074076D /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		15444A4E25D6F9F50074076D /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		15444A5925D6FDFF0074076D /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = ../../../Kamnev_iOS8_CollectionView/Navigation/Extensions/UIColor.swift; sourceTree = "<group>"; };
 		15444A5D25D943FB0074076D /* HabitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCollectionViewCell.swift; sourceTree = "<group>"; };
 		15444A6025D957100074076D /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
 		15444A6425D957A10074076D /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		15444A8225DD34D30074076D /* HabitsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsDetailsViewController.swift; sourceTree = "<group>"; };
 		15444A8525DD47870074076D /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		15444A8925DD7FDC0074076D /* DeleteAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlertViewController.swift; sourceTree = "<group>"; };
+		15CB777325ED6FA1007D5C0D /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +138,7 @@
 		15444A5525D6F9FE0074076D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				15444A5925D6FDFF0074076D /* UIColor.swift */,
+				15CB777325ED6FA1007D5C0D /* UIColor.swift */,
 				15444A4D25D6F9F50074076D /* UIImage.swift */,
 				15444A4A25D6F9F50074076D /* UIStackView.swift */,
 				15444A4B25D6F9F50074076D /* UIView.swift */,
@@ -220,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15444A3425D686BE0074076D /* HabitsStore.swift in Sources */,
+				15CB777425ED6FA1007D5C0D /* UIColor.swift in Sources */,
 				15444A8A25DD7FDC0074076D /* DeleteAlertViewController.swift in Sources */,
 				15444A7B25D9C4730074076D /* HabitViewController.swift in Sources */,
 				15444A6125D957100074076D /* ColorSet.swift in Sources */,
@@ -237,7 +238,6 @@
 				15444A4525D692C10074076D /* InfoViewController.swift in Sources */,
 				15444A1C25D6828E0074076D /* AppDelegate.swift in Sources */,
 				15444A8325DD34D30074076D /* HabitsDetailsViewController.swift in Sources */,
-				15444A5A25D6FDFF0074076D /* UIColor.swift in Sources */,
 				153403B425E01F2100F3345C /* Date.swift in Sources */,
 				15444A5E25D943FB0074076D /* HabitCollectionViewCell.swift in Sources */,
 			);
